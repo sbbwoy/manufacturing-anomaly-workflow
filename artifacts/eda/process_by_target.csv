@@ -1,0 +1,5 @@
+,Air temperature [K],Air temperature [K],Air temperature [K],Air temperature [K],Process temperature [K],Process temperature [K],Process temperature [K],Process temperature [K],Rotational speed [rpm],Rotational speed [rpm],Rotational speed [rpm],Rotational speed [rpm],Torque [Nm],Torque [Nm],Torque [Nm],Torque [Nm],Tool wear [min],Tool wear [min],Tool wear [min],Tool wear [min]
+,count,mean,median,std,count,mean,median,std,count,mean,median,std,count,mean,median,std,count,mean,median,std
+Machine failure,,,,,,,,,,,,,,,,,,,,
+0,9661,299.9739985508746,300.0,1.9907479694438388,9661,309.99556981678916,310.0,1.4868460647646082,9661,1540.2600144912535,1507.0,167.39473403228376,9661,39.62965531518476,39.9,9.472080111077108,9661,106.69371700652107,107.0,62.94579046389421
+1,339,300.88643067846607,301.6,2.0714726067976117,339,310.2902654867257,310.4,1.3636856993840747,339,1496.486725663717,1365.0,384.94354727230365,339,50.16814159292036,53.7,16.374498133978204,339,143.78171091445427,165.0,72.75987593568684

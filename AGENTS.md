@@ -27,3 +27,14 @@
 - 학습·검증·평가 데이터를 먼저 분리한다. 전처리 파라미터는 학습 데이터에서 추정하고 임계값은 검증 데이터에서 정한다. 시간 순서와 설비·로트 단위의 중복으로 인한 누수를 점검한다.
 - 이상 점수, 실제 고장 라벨, 원인 해석을 구분한다. 라벨이 부족하면 평가 한계를 명시한다.
 - 공개 저장소에 비공개 원본 데이터, 접근 자격 증명, 민감한 설비 식별자를 포함하지 않는다.
+
+## Token Efficiency
+
+- Minimize token usage without sacrificing correctness.
+- Do not print entire files unless explicitly requested.
+- Show only changed sections or unified diffs.
+- Avoid repeating unchanged code or explanations.
+- Keep responses concise and actionable.
+- Summarize test results instead of printing full logs.
+- Read only files relevant to the current task.
+- Do not modify unrelated code.
