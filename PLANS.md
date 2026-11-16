@@ -28,12 +28,16 @@
 - [x] [모델링 설계](MODELING.md)와 [학습 스크립트](train_models.py)를 추가했다. Logistic Regression(지도학습)과 Isolation Forest(비지도)로 같은 Train/Validation 전처리 입력을 사용하고, 두 모델의 점수와 UID 추적 정보를 저장한다.
 - [x] 소규모 합성 입력 기반 신규 단위 테스트 3개 통과: 재현성, 결과 정렬, 잘못된 입력/매니페스트 차단, 비지도 학습에서 라벨 미사용, Test 미접근.
 - [ ] 실제 AI4I 10,000건으로 `python train_models.py --input artifacts/preprocessing --output artifacts/modeling`을 실행하고 모델 파일·점수 파일·실행 기록을 검증한다. 기존 전체 테스트 재실행도 필요하다.
-- [ ] 모델링 결과를 바탕으로 Validation에서 평가 지표와 임계값을 결정한다. Test는 이 단계에서 점수화하지 않는다.
+- [x] 기존 Validation 점수로 두 모델의 평가 지표와 F2 최대화 임계값을 결정했다. 상세 결과는 4단계와 artifacts/evaluation/report.md에 기록했다.
 - **완료 조건** — 기준 방법과 후보의 실행 설정을 기록했고 이상 점수를 원래 관측값과 연결할 수 있다. 최종 모델은 미정이다.
 
 ## 4. 성능 평가
 
-- [ ] 라벨 가용성에 맞춰 지표와 검토 절차를 정한다. 검증 데이터에서 임계값을 선택하고 별도 평가 데이터에서 비교한다. 라벨이 부족하면 표본 검토 방식과 한계를 기록한다.
+- [x] 최신 main과 동일한 원격 feat/ai4i-validation-evaluation 브랜치에서 기존 validation_scores.csv를 재사용했다. Validation 2,000행/고장 68건의 AP(비보간 평균 정밀도), ROC-AUC 및 F2 최대화 임계값을 산출했다.
+- [x] Logistic Regression은 AP 0.421178, ROC-AUC 0.918821, 임계값 0.7218245828133553, F2 0.551802, FP/FN 123/19였다. Isolation Forest는 AP 0.154999, ROC-AUC 0.807659, 임계값 0.054546713119515866, F2 0.301339, FP/FN 149/41이었다.
+- [x] [평가 코드](evaluate_validation.py), [결과 보고서](artifacts/evaluation/report.md), 지표·혼동행렬, UID별 FP/FN 및 라벨 불일치 6건의 민감도 분석을 저장했다. 민감도 분석은 선택된 임계값을 고정하고 원본/불일치 제외/플래그 OR 대체 라벨을 비교했다.
+- [x] 신규 합성 데이터 테스트 4개와 기존 14개, 총 18개가 통과했다. 전체 테스트는 임시 작업 디렉터리에서 실행해 기존 전처리 테스트의 산출물 해시 검사도 실제 Test 파일을 읽지 않게 했다. 실제 평가의 파일 접근 감시 결과는 artifacts/evaluation/access_audit.json에 저장했다.
+- [ ] 모델과 임계값을 고정한 후 별도 단계에서 Test 최종 평가를 진행한다. 같은 Validation에서 임계값 선택·평가를 수행한 선택 편향 및 라벨 정합성 한계를 유지한다.
 - **완료 조건** — 비교 결과, 임계값 선택 근거, 오탐·미탐 사례 또는 라벨 부족에 따른 평가 한계를 보고서에 남겼다. 최종 지표와 목표 성능 수치는 미정이다.
 
 ## 5. 자동화

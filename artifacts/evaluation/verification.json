@@ -1,0 +1,12 @@
+{
+  "synthetic_evaluation_tests": 4,
+  "existing_tests": 14,
+  "total_tests": 18,
+  "failures": 0,
+  "errors": 0,
+  "suite_working_directory": "temporary isolated directory",
+  "actual_evaluation_exit_code": 0,
+  "actual_data_source": "artifacts/modeling/validation_scores.csv",
+  "actual_test_data_read": false,
+  "input_hash_verified_unchanged": true
+}

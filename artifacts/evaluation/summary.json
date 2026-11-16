@@ -1,0 +1,44 @@
+{
+  "input": "C:\\Users\\jiyeo\\OneDrive\\Desktop\\manu_workflow\\manufacturing-anomaly-workflow\\artifacts\\modeling\\validation_scores.csv",
+  "input_sha256": "2481fe2687723d3a5f3a276cc319da43e0ff9504b1e54659ee3d788e697a34f4",
+  "rows": 2000,
+  "positives": 68,
+  "disagreements": 6,
+  "score_direction": "higher means more likely failure/anomaly",
+  "threshold_rule": "score >= threshold; max validation F2; highest threshold on exact ties",
+  "test_read": false,
+  "metrics": [
+    {
+      "model": "logistic_regression",
+      "rows": 2000,
+      "positives": 68,
+      "threshold": 0.7218245828133553,
+      "ap": 0.4211778554246141,
+      "roc_auc": 0.9188207891852394,
+      "precision": 0.28488372093023256,
+      "recall": 0.7205882352941176,
+      "f1": 0.4083333333333333,
+      "f2": 0.5518018018018018,
+      "tn": 1809,
+      "fp": 123,
+      "fn": 19,
+      "tp": 49
+    },
+    {
+      "model": "isolation_forest",
+      "rows": 2000,
+      "positives": 68,
+      "threshold": 0.054546713119515866,
+      "ap": 0.15499877466094422,
+      "roc_auc": 0.8076589331384728,
+      "precision": 0.1534090909090909,
+      "recall": 0.39705882352941174,
+      "f1": 0.22131147540983606,
+      "f2": 0.3013392857142857,
+      "tn": 1783,
+      "fp": 149,
+      "fn": 41,
+      "tp": 27
+    }
+  ]
+}
