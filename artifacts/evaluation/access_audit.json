@@ -1,0 +1,6 @@
+{
+  "read_artifacts": [
+    "artifacts\\modeling\\validation_scores.csv"
+  ],
+  "test_read": false
+}
