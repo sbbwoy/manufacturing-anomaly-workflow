@@ -1,0 +1,36 @@
+{
+  "preprocessing_source_sha256": "ffc3c28f35b1a1636eacd2bf46aca0ff5e795b4a8eb934309c5819079e9b5a18",
+  "input_sha256": {
+    "artifacts\\preprocessing\\summary.json": "58d49cca2cc005ad6ee6517bd6fcb0226cbb7e26b0853eef070a1173a7d24c3c",
+    "artifacts\\preprocessing\\split_manifest.csv": "69770dd4b4f08a964d077e25cda89965b2bcb04bc99a5fa15e16168d77d1e017",
+    "artifacts\\preprocessing\\train_features.csv": "9247148209d8c86303b440acbb5ce9778f44540960c705df16750248c4cd0f07",
+    "artifacts\\preprocessing\\train_tracking.csv": "b827eaefa2162dc5e5400563f625750bbf94d99d24e09a83282c6bab3bc101b3",
+    "artifacts\\preprocessing\\validation_features.csv": "1001d97ca740fff720f20b99270250e735337886f107fee605ddf4c6002adccd",
+    "artifacts\\preprocessing\\validation_tracking.csv": "82f3107240f6598184314267f2b55119b2c3ef294e61f78726ef65445ac1bbe0"
+  },
+  "seed": 42,
+  "training_rows": 6000,
+  "training_positives": 203,
+  "models": {
+    "logistic_regression": {
+      "class_weight": "balanced",
+      "max_iter": 3000,
+      "score": "P(Machine failure = 1)"
+    },
+    "isolation_forest": {
+      "n_estimators": 200,
+      "contamination": "auto",
+      "fit_uses_labels": false,
+      "score": "-decision_function (higher=more anomalous)"
+    }
+  },
+  "scored_splits": [
+    "train",
+    "validation"
+  ],
+  "test_touched": false,
+  "threshold_selected": false,
+  "evaluation_metrics_calculated": false,
+  "sklearn_version": "1.9.1",
+  "limitations": "Random stratified split; time/equipment independence unverified; prior full-data EDA exposed test to exploratory inspection."
+}
