@@ -1,0 +1,14 @@
+{
+  "new_synthetic_holdout_tests": 4,
+  "existing_tests": 18,
+  "total_tests": 22,
+  "failures": 0,
+  "errors": 0,
+  "suite_working_directory": "temporary isolated directory",
+  "synthetic_tests_read_real_test_data": false,
+  "actual_evaluation_exit_code": 0,
+  "actual_predict_proba_calls": 1,
+  "actual_fit_calls": 0,
+  "threshold_adjusted": false,
+  "execution_record_status": "completed"
+}

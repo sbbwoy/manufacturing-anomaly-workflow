@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "config_sha256": "8c1db776be61a40010c248f79a1786e95d97e386f14ef9c231e292d45cd55a9e",
+  "model": "logistic_regression",
+  "threshold": 0.7218245828133553,
+  "claimed_at_utc": "2026-11-16T07:32:14.769342+00:00",
+  "policy": "One-shot claim persists on failure. Do not delete or reset to rerun.",
+  "completed_at_utc": "2026-11-16T07:32:15.383305+00:00",
+  "output": "artifacts/final_holdout",
+  "predict_proba_calls": 1
+}

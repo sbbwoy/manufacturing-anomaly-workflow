@@ -1,0 +1,15 @@
+{
+  "model": "logistic_regression",
+  "threshold": 0.7218245828133553,
+  "prediction_rule": "score >= threshold",
+  "selection_reason": "Highest Validation AP; threshold maximizes Validation F2",
+  "selection_pr": "https://github.com/sbbwoy/manufacturing-anomaly-workflow/pull/2",
+  "selection_main_commit": "5ed2fb90f807b3434281782181bc7055bd92f755",
+  "expected_rows": 2000,
+  "pinned_sha256": {
+    "artifacts/modeling/logistic_regression.joblib": "2978992e008ec271ca4550b431bf0785e74164dcd3beef08384e2e551bb6a654",
+    "artifacts/modeling/summary.json": "cd63f67d29ce9917522cfb3fa7dcee3e73632db3e881f9422dc058a771036823",
+    "artifacts/evaluation/metrics.csv": "b19b3ff075e4e20a20a2a129a1dc312e7d7a095a94cbfd1f27b0d4f81bb74b6f",
+    "artifacts/preprocessing/summary.json": "58d49cca2cc005ad6ee6517bd6fcb0226cbb7e26b0853eef070a1173a7d24c3c"
+  }
+}
