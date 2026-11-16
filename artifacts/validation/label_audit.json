@@ -1,0 +1,26 @@
+{
+  "source_file": "data\\ai4i2020.csv",
+  "source_sha256_before": "ffc3c28f35b1a1636eacd2bf46aca0ff5e795b4a8eb934309c5819079e9b5a18",
+  "source_sha256_after": "ffc3c28f35b1a1636eacd2bf46aca0ff5e795b4a8eb934309c5819079e9b5a18",
+  "source_unchanged": true,
+  "total_rows": 10000,
+  "target_counts": {
+    "0": 9661,
+    "1": 339
+  },
+  "mode_counts": {
+    "TWF": 46,
+    "HDF": 115,
+    "PWF": 95,
+    "OSF": 98,
+    "RNF": 19
+  },
+  "rows_with_multiple_mode_flags": 24,
+  "discrepancy_counts": {
+    "mode_flag_but_normal": 18,
+    "failure_without_mode_flag": 9
+  },
+  "discrepancy_rows": 27,
+  "discrepancy_rate": 0.0027,
+  "interpretation": "Descriptive label audit only. Do not edit/drop rows automatically. Compare dataset revision, source documentation, and modeling policy separately."
+}
