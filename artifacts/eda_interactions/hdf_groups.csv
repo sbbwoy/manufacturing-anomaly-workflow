@@ -1,0 +1,5 @@
+,Temperature difference [K],Temperature difference [K],Temperature difference [K],Temperature difference [K],Rotational speed [rpm],Rotational speed [rpm],Rotational speed [rpm],Rotational speed [rpm]
+,count,min,median,max,count,min,median,max
+HDF,,,,,,,,
+0,9885,7.599999999999966,9.800000000000011,12.100000000000023,9885,1168,1505.0,2886
+1,115,7.599999999999966,8.300000000000011,8.599999999999966,115,1212,1346.0,1379

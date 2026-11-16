@@ -4,6 +4,9 @@
 
 ## 1. 데이터 탐색
 
+- [x] 공정 변수 조합 추가 EDA를 `eda_interactions.py`로 실행했다. [추가 보고서](artifacts/eda_interactions/report.md), 그래프 4개와 통계표 5개를 별도로 저장했다. 원본 CSV와 기존 EDA 산출물의 해시 보존을 확인했다. HDF는 115건, 제품 유형별 OSF는 L 87건, M 9건, H 2건이다.
+- 추가 분석 재실행은 `python eda_interactions.py --output artifacts/eda_interactions_new`로 수행한다. 기존 출력 폴더가 있으면 덮어쓰기를 거부한다.
+
 - [x] EDA 입력으로 [UCI AI4I 2020 합성 데이터](https://doi.org/10.24432/C5HS5C)를 확보했다. 원본은 `data/ai4i2020.csv`에 저장했다.
 - [x] [EDA 스크립트](eda.py)를 원본 CSV로 실행해 [분석 보고서](artifacts/eda/report.md), CSV 통계표 11개, PNG 그래프 5개를 생성했다. 10,000행 중 고장은 339건(3.39%)이며, 실행 전후 입력 파일의 SHA-256이 일치했다.
 - 재실행 명령은 `python eda.py --input data/ai4i2020.csv --output artifacts/eda`이다. 실행 환경에 pandas, matplotlib, seaborn이 필요하다.
