@@ -1,0 +1,11 @@
+{
+  "rows": 10000,
+  "machine_failure": 339,
+  "any_mode": 348,
+  "disagreements": 27,
+  "normal_with_flags": 18,
+  "failure_without_flags": 9,
+  "rnf_with_target": 1,
+  "hdf_exact_boundary_rows": 27,
+  "twf_outside_200_240": 3
+}
