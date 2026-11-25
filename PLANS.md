@@ -29,6 +29,10 @@
 - [x] 소규모 합성 입력 기반 신규 단위 테스트 3개 통과: 재현성, 결과 정렬, 잘못된 입력/매니페스트 차단, 비지도 학습에서 라벨 미사용, Test 미접근.
 - [ ] 실제 AI4I 10,000건으로 `python train_models.py --input artifacts/preprocessing --output artifacts/modeling`을 실행하고 모델 파일·점수 파일·실행 기록을 검증한다. 기존 전체 테스트 재실행도 필요하다.
 - [x] 기존 Validation 점수로 두 모델의 평가 지표와 F2 최대화 임계값을 결정했다. 상세 결과는 4단계와 artifacts/evaluation/report.md에 기록했다.
+- [x] 2026-11-25 비지도 모델 비교를 별도 `compare_unsupervised.py`와 `artifacts/unsupervised_comparison/`에 구현했다. 기존 11개 특징을 재사용하고 Train 특징만 네 모델 `fit`에 전달했으며, 점수 산출 후 Validation 라벨로 AP·ROC-AUC와 95분위수 임계값 지표를 평가했다. Test 파일과 Test 행을 포함한 매니페스트는 읽지 않았다.
+- [x] AI4I 10,000행 중 Train 6,000행·Validation 2,000행으로 실행했다. AP는 One-Class SVM 0.277678, LOF 0.197021, PCA 0.189558, Isolation Forest 0.154999였다. One-Class SVM을 비지도 비교의 후속 후보로 선정했다. 결과·시간·입력 해시·PR 곡선은 `artifacts/unsupervised_comparison/`에 저장했다. 기존 Logistic Regression 평가 및 Test 산출물은 변경하지 않았다.
+- [x] 새 합성 테스트 3개와 전체 테스트 25개가 통과했다. 모델별 fit에 라벨이 전달되지 않는 점, LOF novelty 점수, 재현성, 스키마 오류, 95분위수 기준, 라벨 지연 로드와 Test 파일 미접근을 확인했다. 전체 테스트는 합성 입력만 사용했다.
+- [x] [모델링 문서](MODELING.md)와 [2026-11-25 개발 보고서](docs/build-log/2026-11-25-development-report.md)를 갱신했다.
 - **완료 조건** — 기준 방법과 후보의 실행 설정을 기록했고 이상 점수를 원래 관측값과 연결할 수 있다. 최종 Test 평가 모델은 Validation AP가 가장 높은 Logistic Regression으로 고정했다.
 
 ## 4. 성능 평가
